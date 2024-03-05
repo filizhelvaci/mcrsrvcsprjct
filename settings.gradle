@@ -1,0 +1,3 @@
+rootProject.name = 'mcrsrvcsprjct'
+include 'ServiceAuth'
+
