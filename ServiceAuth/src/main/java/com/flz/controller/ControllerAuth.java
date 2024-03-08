@@ -7,10 +7,7 @@ import com.flz.dto.response.DoRegisterResponseDto;
 import com.flz.model.Auth;
 import com.flz.service.ServiceAuth;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -41,7 +38,9 @@ public class ControllerAuth {
         return ResponseEntity.ok(serviceAuth.doLogin(dto));
     }
 
-    public ResponseEntity<List<Auth>> findAll()   {
+    //    http://localhost:9090/auth/getall
+    @GetMapping("/getall")
+    public ResponseEntity<  List<Auth>> findAll()   {
         return ResponseEntity.ok(serviceAuth.findAll());
     }
 

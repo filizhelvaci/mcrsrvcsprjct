@@ -1,11 +1,11 @@
 ##### port #####
 server:
-  port: 9090
+  port: 9092
 
 ##### data postgresql #####
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/${Auth_DB_DB_NAME}   # PostgreSQL veritabanı URL'si
+    url: jdbc:postgresql://localhost:5432/${Agent_DB_DB_NAME}   # PostgreSQL veritabanı URL'si
     username: ${DB_USERNAME}                                    # Veritabanı kullanıcı adı
     password: ${DB_PASSWORD}                                 # Veritabanı şifresi
     driver-class-name: ${DB_DRIVER}           # PostgreSQL JDBC sürücüsü

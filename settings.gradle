@@ -1,3 +1,8 @@
 rootProject.name = 'mcrsrvcsprjct'
 include 'ServiceAuth'
+include 'ServiceUserProfile'
+include 'ServiceAgent'
+include 'ServiceBuyer'
+include 'ServiceProperties'
+include 'ServiceBuyer'
 

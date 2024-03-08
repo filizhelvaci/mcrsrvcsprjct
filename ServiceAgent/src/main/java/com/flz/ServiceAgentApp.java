@@ -2,13 +2,11 @@ package com.flz;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients
-public class ServiceAuthApp {
+public class ServiceAgentApp {
     public static void main(String[] args) {
 
-        SpringApplication.run(ServiceAuthApp.class, args);
+        SpringApplication.run(ServiceAgentApp.class, args);
     }
 }
