@@ -3,7 +3,7 @@ ext {
      * Bağımlılıkları versiyonlama işlemleri:
      */
     versions = [
-            springBoot          : "3.2.3",
+            springBoot          : "3.2.2",
             springCloud         : "4.1.0",
             lombok              : "1.18.28",
             mapStruct           : "1.5.5.Final",
@@ -14,7 +14,10 @@ ext {
 
     ]
 
-
+    //org.springframework.cloud:spring-cloud-openfeign-core
+    //implementation 'org.springframework.cloud:spring-cloud-openfeign-core:4.0.6
+  // org.springframework.cloud:spring-cloud-starter-openfeign:4.0.6
+   // implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.0.4'
     /**
      * Bu kısımda bağımlılık listesini oluştracağız. K:V
      * 1. bağımlılığa bir ad belirle
@@ -36,6 +39,11 @@ ext {
             swaggerApi                      : "org.springdoc:springdoc-openapi-starter-webmvc-ui:$versions.swaggerApi",
             jwt                             : "com.auth0:java-jwt:$versions.jwt",
             mySql                           : "com.mysql:mysql-connector-j:$versions.mySql",
+            springCloudConfigClient         : "org.springframework.cloud:spring-cloud-config-client:$versions.springCloud",
+            springCloudConfigServer         : "org.springframework.cloud:spring-cloud-config-server:$versions.springCloud",
+            springCloudStarterConfig        : "org.springframework.cloud:spring-cloud-starter-config:$versions.springCloud",
+
 
          ]
+
 }

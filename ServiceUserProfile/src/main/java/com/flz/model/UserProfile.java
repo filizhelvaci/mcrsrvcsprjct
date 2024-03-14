@@ -3,6 +3,7 @@ package com.flz.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
@@ -10,7 +11,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @SuperBuilder
 @Data
-
+@EqualsAndHashCode(callSuper=false)
 @Entity
 @Table(name="user_profile")
 public class UserProfile extends BaseEntity {
@@ -19,7 +20,7 @@ public class UserProfile extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long authId;
+    //private Long authId;
     private String username;
     private String email;
     private String nickname;

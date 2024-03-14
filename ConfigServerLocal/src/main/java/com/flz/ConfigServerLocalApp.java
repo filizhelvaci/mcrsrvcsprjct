@@ -1,14 +1,15 @@
 package com.flz;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
-//@EnableFeignClients
+@EnableConfigServer
 @SpringBootApplication
-public class ServiceUserProfileApp {
+public class ConfigServerLocalApp {
     public static void main(String[] args) {
 
-        SpringApplication.run(ServiceUserProfileApp.class, args);
+        SpringApplication.run(ConfigServerLocalApp.class, args);
     }
 }

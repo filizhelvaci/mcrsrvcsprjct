@@ -4,5 +4,6 @@ include 'ServiceUserProfile'
 include 'ServiceAgent'
 include 'ServiceBuyer'
 include 'ServiceProperties'
-include 'ServiceBuyer'
+include 'ConfigServerLocal'
+include 'ConfigServerRemote'
 

@@ -18,12 +18,12 @@ public class ServiceAuth extends ServiceManager<Auth,Long> {
     // *************  @AutoWired *************** //
     private final IRepositoryAuth repository;
 
-    private final IUserProfileManager userProfileManager;
+    //private final IUserProfileManager userProfileManager;
 
-    public ServiceAuth(IRepositoryAuth repository, IUserProfileManager userProfileManager) {
+    public ServiceAuth(IRepositoryAuth repository) {
         super(repository);
         this.repository = repository;
-        this.userProfileManager = userProfileManager;
+
     }
 
 
@@ -51,7 +51,7 @@ public class ServiceAuth extends ServiceManager<Auth,Long> {
         System.out.println("auth: " +  auth);
 
         // Başka bir servisi çağırıyoruz
-        userProfileManager.save(IAuthMapper.INSTANCE.fromAuth(auth));
+        // userProfileManager.save(IAuthMapper.INSTANCE.fromAuth(auth));
 
 
         DoRegisterResponseDto responseDto = new DoRegisterResponseDto();

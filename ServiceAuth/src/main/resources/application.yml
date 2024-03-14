@@ -1,20 +1,8 @@
-##### port #####
-server:
-  port: 9090
-
-##### data postgresql #####
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/${Auth_DB_DB_NAME}   # PostgreSQL veritabanı URL'si
-    username: ${DB_USERNAME}                                    # Veritabanı kullanıcı adı
-    password: ${DB_PASSWORD}                                 # Veritabanı şifresi
-    driver-class-name: ${DB_DRIVER}           # PostgreSQL JDBC sürücüsü
-  jpa:
-    hibernate:
-      ddl-auto: update                                 # Veritabanı şemasının otomatik güncellenmesi
-    show-sql: true
-
-##### swagger-ui path #####
-springdoc:
-  swagger-ui:
-    path: /swagger-ui.html
+  cloud:
+    config:
+      uri: http://localhost:8888
+  config:
+    import: "configserver:"
+  application:
+    name: service-auth-app
