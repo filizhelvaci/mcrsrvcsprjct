@@ -6,4 +6,5 @@ include 'ServiceBuyer'
 include 'ServiceProperties'
 include 'ConfigServerLocal'
 include 'ConfigServerRemote'
+include 'ServiceApiGateway'
 
