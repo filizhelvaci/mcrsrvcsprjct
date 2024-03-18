@@ -3,18 +3,18 @@ ext {
      * Bağımlılıkları versiyonlama işlemleri:
      */
     versions = [
-            springBoot          : "3.2.2",
-            springCloud         : "4.1.0",
+            springBoot          : "3.0.13",
+            springCloud         : "4.0.0",
             lombok              : "1.18.28",
             mapStruct           : "1.5.5.Final",
-            postgreSql          : "42.6.1",
+            postgreSql          : "42.7.1",
             swaggerApi          : "2.3.0",
             jwt                 : "4.4.0",
-            mySql               : "8.3.0"
+            mySql               : "8.3.0",
+            springCloudCircuitBreaker :"3.0.0"
 
     ]
-
-    //org.springframework.cloud:spring-cloud-openfeign-core
+       //org.springframework.cloud:spring-cloud-openfeign-core
     //implementation 'org.springframework.cloud:spring-cloud-openfeign-core:4.0.6
   // org.springframework.cloud:spring-cloud-starter-openfeign:4.0.6
    // implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.0.4'
@@ -42,7 +42,9 @@ ext {
             springCloudConfigClient         : "org.springframework.cloud:spring-cloud-config-client:$versions.springCloud",
             springCloudConfigServer         : "org.springframework.cloud:spring-cloud-config-server:$versions.springCloud",
             springCloudStarterConfig        : "org.springframework.cloud:spring-cloud-starter-config:$versions.springCloud",
-            springCloudGateway              : "org.springframework.cloud:spring-cloud-starter-gateway:$versions.springCloud"
+            springCloudGateway              : "org.springframework.cloud:spring-cloud-starter-gateway:$versions.springCloud",
+            springCloudCircuitBreaker       : "org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j:$versions.springCloudCircuitBreaker",
+            springCloudCircuitBreakerReactor: "org.springframework.cloud:spring-cloud-starter-circuitbreaker-reactor-resilience4j:$versions.springCloudCircuitBreaker"
 
          ]
 
