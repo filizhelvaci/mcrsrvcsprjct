@@ -8,3 +8,8 @@ spring:
     import: "configserver:"
   application:
     name: service-apigateway-app
+
+management:
+  tracing:
+    sampling:
+      probability: 1

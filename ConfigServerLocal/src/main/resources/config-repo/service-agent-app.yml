@@ -4,6 +4,17 @@ server:
 
 ##### data postgresql #####
 spring:
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411/
+    service:
+      name: service-agent
+    sender:
+      type: web
+    sleuth:
+      sampler:
+        probability: 1
+
   datasource:
     url: jdbc:postgresql://localhost:5432/${Agent_DB_DB_NAME}   # PostgreSQL veritabanı URL'si
     username: ${DB_USERNAME}                                    # Veritabanı kullanıcı adı

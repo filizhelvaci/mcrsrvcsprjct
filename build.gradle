@@ -76,7 +76,11 @@ allprojects {
 		implementation libs.jwt
 		implementation libs.springCloudOpenFeign
 		implementation libs.springCloudConfigClient
-
+		implementation libs.springActuator
+		implementation libs.springValidation
+		implementation libs.bridgeBrave
+		implementation libs.reporterBrave
+		implementation libs.observation
 
 	}
 }

@@ -24,6 +24,7 @@ public class ControllerAuth {
 
     // *******************    ********************* //
 
+
     //    http://localhost:9090/auth/register
     @PostMapping(EndPoint.REGISTER)
     public ResponseEntity<DoRegisterResponseDto> doRegister(@RequestBody DoRegisterRequestDto dto){

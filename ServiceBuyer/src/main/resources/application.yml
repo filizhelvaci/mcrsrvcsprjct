@@ -6,3 +6,8 @@ spring:
     import: "configserver:"
   application:
     name: service-buyer-app
+
+management:
+  tracing:
+    sampling:
+      probability: 1
