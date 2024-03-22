@@ -6,6 +6,8 @@ import com.flz.dto.response.DoRegisterResponseDto;
 import com.flz.manager.IUserProfileManager;
 import com.flz.mapper.IAuthMapper;
 import com.flz.model.Auth;
+import com.flz.rabbitmq.model.AuthSaveModel;
+import com.flz.rabbitmq.producer.CreateUserProducer;
 import com.flz.repository.IRepositoryAuth;
 import com.flz.utils.ServiceManager;
 import org.springframework.stereotype.Service;
@@ -20,10 +22,12 @@ public class ServiceAuth extends ServiceManager<Auth,Long> {
 
     //private final IUserProfileManager userProfileManager;
 
-    public ServiceAuth(IRepositoryAuth repository) {
+    private final CreateUserProducer createUserProducer;
+    public ServiceAuth(IRepositoryAuth repository, CreateUserProducer createUserProducer) {
         super(repository);
         this.repository = repository;
 
+        this.createUserProducer = createUserProducer;
     }
 
 
@@ -53,6 +57,11 @@ public class ServiceAuth extends ServiceManager<Auth,Long> {
         // Başka bir servisi çağırıyoruz
         // userProfileManager.save(IAuthMapper.INSTANCE.fromAuth(auth));
 
+        createUserProducer.convertAndSend(AuthSaveModel.builder()
+                        .authId(auth.getId())
+                        .username(auth.getUsername())
+                        .email(auth.getEmail())
+                        .build());
 
         DoRegisterResponseDto responseDto = new DoRegisterResponseDto();
         responseDto.setUsername(dto.getUsername());

@@ -10,6 +10,7 @@ import lombok.*;
 public class UserProfileSaveRequestDto {
 
     Long id;
+    Long authId;
     String username;
     String email;
 
