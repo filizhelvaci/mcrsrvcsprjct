@@ -4,6 +4,11 @@ server:
 
 ##### data postgresql #####
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: user
   zipkin:
     enabled: true
     base-url: http://localhost:9411/
