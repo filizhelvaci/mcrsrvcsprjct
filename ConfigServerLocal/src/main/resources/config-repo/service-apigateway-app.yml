@@ -5,9 +5,9 @@ server:
 spring:
   rabbitmq:
     host: localhost
-    port: 5672
-    username: user
-    password: user
+    port: ${API_PORT}
+    username: ${API_USERNAME}
+    password: ${API_PASSWORD}
 
   zipkin:
     enabled: true
